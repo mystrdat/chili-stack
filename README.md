@@ -1,1 +1,1 @@
-# gonzo-stack
+# chili-stack
