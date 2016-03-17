@@ -11,7 +11,6 @@ var rubySASS     = require('gulp-ruby-sass');
 var postCSS      = require('gulp-postcss');
 var autoprefixer = require('autoprefixer-core');
 var cleanCSS     = require('gulp-clean-css');
-var combineMQ    = require('gulp-combine-mq');
 
 // Paths
 var srcPath    = './'
@@ -22,9 +21,8 @@ var buildName  = 'style.min.css'
 gulp.task('build-sass', function () {
   return rubySASS(srcPath + 'main.sass')
     .on('error', rubySASS.logError)
-    .pipe(combineMQ({ beautify: false }))
     .pipe(postCSS([ autoprefixer({ browsers: ['last 2 version'] }) ]))
-    .pipe(cleanCSS({ keepSpecialComments: 0 }))
+    .pipe(cleanCSS({ keepSpecialComments: 0, mergeMediaQueries: true }))
     .pipe(rename(buildName))
     .pipe(gulp.dest(buildPath));
 });
