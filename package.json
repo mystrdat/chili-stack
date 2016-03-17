@@ -8,12 +8,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mystrdat/gonzo-stack.git"
+    "url": "git+https://github.com/mystrdat/chili-stack.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "mystrdat",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mystrdat/gonzo-stack/issues"
+    "url": "https://github.com/mystrdat/chili-stack/issues"
   },
-  "homepage": "https://github.com/mystrdat/gonzo-stack#readme"
+  "homepage": "https://github.com/mystrdat/chili-stack#readme",
+  "dependencies": {
+    "autoprefixer-core": "^6.0.1",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.3",
+    "gulp-combine-mq": "^0.4.0",
+    "gulp-postcss": "^6.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^2.0.6"
+  }
 }
