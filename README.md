@@ -4,3 +4,5 @@
 2. `gem install sass`
 3. `npm install`
 4. `gulp` (runs as watcher)
+
+Autoprefixed, minified, MQ combined.
