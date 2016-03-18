@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/mystrdat/chili-stack#readme",
   "dependencies": {
-    "autoprefixer-core": "^6.0.1",
+    "autoprefixer": "^6.3.3",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.3",
     "gulp-postcss": "^6.1.0",

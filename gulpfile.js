@@ -9,7 +9,7 @@ var gulp         = require('gulp');
 var rename       = require('gulp-rename');
 var rubySASS     = require('gulp-ruby-sass');
 var postCSS      = require('gulp-postcss');
-var autoprefixer = require('autoprefixer-core');
+var autoprefixer = require('autoprefixer');
 var cleanCSS     = require('gulp-clean-css');
 var sourcemaps   = require('gulp-sourcemaps');
 
