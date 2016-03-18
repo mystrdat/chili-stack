@@ -3,6 +3,8 @@
 1. Install Ruby - [Win](http://rubyinstaller.org/), [Linux](https://www.ruby-lang.org/en/documentation/installation/#package-management-systems)
 2. `gem install sass`
 3. `npm install`
-4. `gulp` (runs as watcher)
+4. `gulp` (runs as watcher, defaults to dev build)
 
-Autoprefixed, minified, MQ combined.
+`gulp build-dev` - raw compile with inline maps  
+`gulp build-prod` - minified, autoprefixed, MQ combined output, no comments
+
