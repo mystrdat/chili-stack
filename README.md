@@ -5,6 +5,6 @@
 3. `npm install`
 4. `gulp` (runs as watcher, defaults to dev build)
 
-`gulp build-dev` - raw compile with inline maps  
-`gulp build-prod` - minified, autoprefixed, MQ combined output, no comments
+`gulp dev` - raw compile with inline maps  
+`gulp prod` - minified, autoprefixed, MQ combined output, no comments
 

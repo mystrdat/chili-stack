@@ -47,3 +47,5 @@ gulp.task('watch-prod', function() {
 
 // Tasks
 gulp.task('default', ['build-dev', 'watch-dev']);
+gulp.task('dev', ['build-dev', 'watch-dev']);
+gulp.task('prod', ['build-prod', 'watch-prod']);
