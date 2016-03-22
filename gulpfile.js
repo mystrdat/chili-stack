@@ -4,22 +4,24 @@
   2016 | MIT
   ============================== */
 
+'use strict';
+
 // Dependencies
-var gulp         = require('gulp');
-var rename       = require('gulp-rename');
-var rubySASS     = require('gulp-ruby-sass');
-var postCSS      = require('gulp-postcss');
-var autoprefixer = require('autoprefixer');
-var cleanCSS     = require('gulp-clean-css');
-var sourcemaps   = require('gulp-sourcemaps');
+const gulp         = require('gulp');
+const rename       = require('gulp-rename');
+const rubySASS     = require('gulp-ruby-sass');
+const postCSS      = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const cleanCSS     = require('gulp-clean-css');
+const sourcemaps   = require('gulp-sourcemaps');
 
 // Paths
-var srcPath    = './'
-var buildPath  = './build/'
-var buildName  = 'style'
+const srcPath   = './';
+const buildPath = './build/';
+const buildName = 'style';
 
 // Compile with inline map for dev
-gulp.task('build-dev', function () {
+gulp.task('build-dev', function() {
   return rubySASS(srcPath + 'main.sass', { sourcemap: true })
     .pipe(rename(buildName + '.css'))
     .on('error', rubySASS.logError)
@@ -28,7 +30,7 @@ gulp.task('build-dev', function () {
 });
 
 // Compile minified and optimized for prod
-gulp.task('build-prod', function () {
+gulp.task('build-prod', function() {
   return rubySASS(srcPath + 'main.sass')
     .on('error', rubySASS.logError)
     .pipe(postCSS([ autoprefixer({ browsers: ['last 2 version'] }) ]))
