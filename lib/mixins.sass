@@ -145,9 +145,9 @@ $fontScale: 62.5% !default
     background-image: __appendToImageFilename($src, '@3x')
 
 // Effects
-=transition($props: (), $duration: (), $easing: (), $delay: 0ms)
+=transition($props: (), $duration: (), $easing: ('linear'), $delay: ('0ms'))
   transition-property: __listToString($props, ', ')
   transition-duration: __listToString($duration, ', ')
   transition-timing-function: __listToString($easing, ', ')
-  transition-delay: $delay
+  transition-delay: __listToString($delay, ', ')
   will-change: __listToString($props, ', ')
