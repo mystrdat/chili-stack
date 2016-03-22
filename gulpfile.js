@@ -21,7 +21,7 @@ const buildPath = './build/';
 const buildName = 'style';
 
 // Compile with inline map for dev
-gulp.task('build-dev', function() {
+gulp.task('build-dev', () => {
   return rubySASS(srcPath + 'main.sass', { sourcemap: true })
     .pipe(rename(buildName + '.css'))
     .on('error', rubySASS.logError)
@@ -30,7 +30,7 @@ gulp.task('build-dev', function() {
 });
 
 // Compile minified and optimized for prod
-gulp.task('build-prod', function() {
+gulp.task('build-prod', () => {
   return rubySASS(srcPath + 'main.sass')
     .on('error', rubySASS.logError)
     .pipe(postCSS([ autoprefixer({ browsers: ['last 2 version'] }) ]))
@@ -40,10 +40,10 @@ gulp.task('build-prod', function() {
 });
 
 // Watchers
-gulp.task('watch-dev', function() {
+gulp.task('watch-dev', () => {
   gulp.watch([srcPath + '**/*.sass', srcPath + '**/*.scss'], ['build-dev']);
 });
-gulp.task('watch-prod', function() {
+gulp.task('watch-prod', () => {
   gulp.watch([srcPath + '**/*.sass', srcPath + '**/*.scss'], ['build-prod']);
 });
 
