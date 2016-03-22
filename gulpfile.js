@@ -4,8 +4,6 @@
   2016 | MIT
   ============================== */
 
-'use strict';
-
 // Dependencies
 const gulp         = require('gulp');
 const rename       = require('gulp-rename');
