@@ -91,16 +91,12 @@ $fontScale: 62.5% !default
 =distribute($args: (), $dir: row)
   $flexMap: (left: flex-start, right: flex-end, top: flex-start, bottom: flex-end, center: center)
   @if length($args) == 2
+    @x: map-get($flexMap, nth($args, 1)) or nth($args, 1)
+    @y: map-get($flexMap, nth($args, 2)) or nth($args, 2)
     display: flex
     flex-direction: $dir
-    @if $dir == 'row'
-      justify-content: map-get($flexMap, nth($args, 1)) or nth($args, 1)
-      align-items: map-get($flexMap, nth($args, 2)) or nth($args, 2)
-    @else if $dir == 'column'
-      justify-content: map-get($flexMap, nth($args, 2)) or nth($args, 2)
-      align-items: map-get($flexMap, nth($args, 1)) or nth($args, 1)
-    @else
-      @warn 'Invalid direction: \'#{$dir}\'.'
+    justify-content: if($dir == 'row', @x, @y)
+    align-items: if($dir == 'row', @y, @x)
   @else
     @warn 'Invalid length of arguments \'#{length($args)}\' for distribute() in chain \'#{&}\'.'
 
