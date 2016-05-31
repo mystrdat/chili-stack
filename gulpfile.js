@@ -1,6 +1,5 @@
 /*
-  chili
-  github.com/mystrdat/chili-stack
+  github.com/mystrdat/gonzo-stack
   2016 | MIT
   ============================== */
 
