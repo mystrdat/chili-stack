@@ -1,4 +1,4 @@
-# chili-stack
+# gonzo-stack
 
 1. Install Ruby - [Win](http://rubyinstaller.org/), [Linux](https://www.ruby-lang.org/en/documentation/installation/#package-management-systems)
 2. `gem install sass`
@@ -7,4 +7,3 @@
 
 `gulp dev` - raw compile with inline maps  
 `gulp prod` - minified, autoprefixed, MQ combined output, no comments
-
