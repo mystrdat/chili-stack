@@ -1,21 +1,21 @@
 {
-  "name": "chili-stack",
+  "name": "gonzo-stack",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.sass",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mystrdat/chili-stack.git"
+    "url": "git+https://github.com/mystrdat/gonzo-stack.git"
   },
   "author": "mystrdat",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mystrdat/chili-stack/issues"
+    "url": "https://github.com/mystrdat/gonzo-stack/issues"
   },
-  "homepage": "https://github.com/mystrdat/chili-stack#readme",
+  "homepage": "https://github.com/mystrdat/gonzo-stack#readme",
   "dependencies": {
     "autoprefixer": "^6.3.3",
     "gulp": "^3.9.1",
