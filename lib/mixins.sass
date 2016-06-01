@@ -137,10 +137,7 @@ $fontScale: 62.5% !default
 // Media
 =background-retina($src, $args: ())
   background-image: url($src)
-  @if length($args) == 2
-    background-size: nth($args, 1) nth($args, 1)
-  @else if length($args) == 1
-    background-size: $args
+  background-size: $args
   +media('retina2x')
     background-image: __appendToImageFilename($src, '@2x')
   +media('retina3x')
