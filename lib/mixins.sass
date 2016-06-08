@@ -88,7 +88,7 @@ $fontScale: 62.5% !default
     display: table
     clear: both
 
-=distribute($args: (), $dir: row)
+=align($args: (), $dir: row)
   $flexMap: (left: flex-start, right: flex-end, top: flex-start, bottom: flex-end, center: center)
   @if length($args) == 2
     $x: map-get($flexMap, nth($args, 1)) or nth($args, 1)
@@ -98,7 +98,7 @@ $fontScale: 62.5% !default
     justify-content: if($dir == 'row', $x, $y)
     align-items: if($dir == 'row', $y, $x)
   @else
-    @warn 'Invalid length of arguments \'#{length($args)}\' for distribute() in chain \'#{&}\'.'
+    @warn 'Invalid length of arguments \'#{length($args)}\' for align() in chain \'#{&}\'.'
 
 =indent($args: (), $exclude: null)
   $offsets: top right bottom left
