@@ -63,7 +63,7 @@ $fontScale: 62.5% !default
       $result: $result + map-get($numbers, $character) / $digits
   @return if($minus, -$result, $result)
 
-// Proportional
+// Utility
 @function em($px, $scale: $fontScale, $unit: 'em')
   @return __toNumber($px/(.16*__stripUnit($scale)) + $unit)
 
@@ -76,6 +76,15 @@ $fontScale: 62.5% !default
     display: table
   &:after
     clear: both
+
+=hardware-accel($props: ())
+   transform: translateZ(0)
+   will-change: if(length($props) > 0, __listToString($props, ', '), null)
+
+=scrollable()
+  overflow-y: auto
+  will-change: scroll-position
+  -webkit-overflow-scrolling: touch
 
 =aspect-ratio($ratio-or-width, $height: null)
   $padding: if($height, percentage($height/$ratio-or-width), percentage(1/$ratio-or-width))
