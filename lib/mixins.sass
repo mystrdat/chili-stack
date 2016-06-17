@@ -78,8 +78,8 @@ $fontScale: 62.5% !default
     clear: both
 
 =hardware-accel($props: ())
-   transform: translateZ(0)
-   will-change: if(length($props) > 0, __listToString($props, ', '), null)
+  transform: translateZ(0)
+  will-change: if(length($props) > 0, __listToString($props, ', '), null)
 
 =scrollable()
   overflow-y: auto
