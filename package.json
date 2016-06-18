@@ -24,7 +24,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-ruby-sass": "^2.0.6",
     "gulp-sourcemaps": "^1.6.0",
-    "inStyle": "^1.5.2",
+    "inStyle": "^1.6.1",
     "include-media": "^1.4.4",
     "normalize-scss": "^5.0.3",
     "susy": "^2.2.12",
