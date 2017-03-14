@@ -8,19 +8,18 @@ $lineHeight:       30px
 $documentMinWidth: 320px
 $contentMaxWidth:  960px
 
-$susy: (columns: 12, gutters: $base, container: $contentMaxWidth)
-
 // Typography
 $fontFamily: sans-serif
 $fontScale:  62.5%
 
-$fontM:      rem(16)
-$fontS:      rem(14)
-$fontXS:     rem(12)
 $fontXXS:    rem(10)
-$fontL:      rem(18)
+$fontXS:     rem(12)
+$fontS:      rem(14)
+$fontM:      rem(16)
+$fontL:      rem(20)
 $fontXL:     rem(24)
-$fontXXL:    rem(32)
+$fontXXL:    rem(36)
+$fontXXXL:   rem(48)
 
 $fontLight:    300
 $fontRegular:  400
@@ -38,3 +37,5 @@ $boxShadow:          0 0 5px $shadowColor
 
 // Easing
 $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275)
+
+$breakpoints: ('phone': 320px, 'mobile': 640px, 'tablet': 768px, 'desktop': 990px)

@@ -6,7 +6,7 @@
 // Dependencies
 const gulp         = require('gulp');
 const rename       = require('gulp-rename');
-const rubySASS     = require('gulp-ruby-sass');
+const sass         = require('gulp-sass');
 const postCSS      = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cleanCSS     = require('gulp-clean-css');
@@ -19,17 +19,18 @@ const buildName = 'style';
 
 // Compile with inline map for dev
 gulp.task('build-dev', () => {
-  return rubySASS(srcPath + 'main.sass', { sourcemap: true })
-    .pipe(rename(buildName + '.css'))
-    .on('error', rubySASS.logError)
+  return gulp.src(srcPath + 'main.sass')
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
     .pipe(sourcemaps.write())
+    .pipe(rename(buildName + '.css'))
     .pipe(gulp.dest(buildPath));
 });
 
 // Compile minified and optimized for prod
 gulp.task('build-prod', () => {
-  return rubySASS(srcPath + 'main.sass')
-    .on('error', rubySASS.logError)
+  return gulp.src(srcPath + 'main.sass')
+    .pipe(sass().on('error', sass.logError))
     .pipe(postCSS([ autoprefixer({ browsers: ['last 2 version'] }) ]))
     .pipe(cleanCSS({ keepSpecialComments: 0, mergeMediaQueries: true }))
     .pipe(rename(buildName + '.min.css'))
